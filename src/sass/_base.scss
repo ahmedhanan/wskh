@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $col-primary;
+}
+
+body {
+  background-color: $col-white;
+  font-family: $font-primary;
+}
+
+.link {
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+.btn {
+  background-color: $col-primary;
+  color: $col-secondary;
+  padding: 1rem 1.25rem;
+  border-radius: 0.2rem;
+  &:hover {
+    background-color: $col-white;
+    color: $col-primary;
+    border: 1px solid $col-primary;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition-duration: 200ms;
+  }
+}

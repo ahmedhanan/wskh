@@ -1,0 +1,58 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.75rem;
+}
+
+.navbar__links {
+  & a {
+    margin-right: 1rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.brand {
+  font-family: $font-heading;
+  font-weight: 900;
+  font-size: 1.25rem;
+  position: relative;
+  animation: typing 3s steps(4) infinite;
+  overflow: hidden;
+}
+
+.brand::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background-color: $col-primary;
+  animation: blinkCursor 0.8s steps(3) infinite;
+}
+
+@keyframes blinkCursor {
+  0%,
+  75% {
+    opacity: 1;
+  }
+  76%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes typing {
+  0%,
+  90%,
+  100% {
+    width: 0;
+  }
+  30%,
+  60% {
+    width: 61.84px;
+  }
+}

@@ -1,0 +1,41 @@
+.hero {
+  background-color: $col-secondary;
+  border-top: 1px solid darken($color: $col-secondary, $amount: 10%);
+  border-bottom: 1px solid darken($color: $col-secondary, $amount: 10%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.hero__content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr auto;
+}
+
+.hero__header {
+  font-family: $font-heading;
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  grid-column: 2 / 3;
+}
+
+.hero__main {
+  text-align: center;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.hero__text {
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+
+.hero__btn {
+    margin-top: 3rem;
+}
