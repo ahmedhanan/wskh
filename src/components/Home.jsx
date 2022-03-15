@@ -4,6 +4,10 @@ import { IoRocketOutline } from 'react-icons/io5/index';
 import PortfolioCard from './PortfolioCard';
 function Home() {
   const [projects, setProjects] = useState([]);
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [message, setMessage] = useState();
+
   useEffect(() => {
     const getProjects = async () => {
       const fetchProjects = await fetch(
@@ -14,6 +18,11 @@ function Home() {
     };
     getProjects();
   }, []);
+
+  const contactFormHandler = (e) => {
+    e.preventDefault();
+    console.log(e.target);
+  };
   return (
     <>
       <Hero />
@@ -55,8 +64,28 @@ function Home() {
             </>
           ))}
       </section>
-      <section className='contact'>
-            
+      <section className='contact' id='contact'>
+        <div className='contact__form-section'>
+          <h2 className='section__heading'>Drop us a line</h2>
+          <form className='contact__form' onSubmit={contactFormHandler}>
+            <label className='form__label'>
+              Your name
+              <br />
+              <input type='text' className='form__input' />
+            </label>
+            <label className='form__label'>
+              Email
+              <br />
+              <input type='email' className='form__input' />
+            </label>
+            <label className='form__label'>
+              How can we be at your assistance?
+              <br />
+              <textarea rows='10' className='form__textarea'></textarea>
+            </label>
+            <button className='btn'>Submit</button>
+          </form>
+        </div>
       </section>
     </>
   );

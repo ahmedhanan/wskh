@@ -55,3 +55,35 @@
     width: 0;
   }
 }
+
+.contact {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.contact__form {
+  margin-top: 2rem;
+  max-width: 40rem;
+}
+
+.form__label {
+  padding-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.form__input {
+  width: 100%;
+  height: 3rem;
+  border: 1px solid darken($color: $col-secondary, $amount: 10%);
+  line-height: 1.75rem;
+  font-size: 1.25rem;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.form__textarea {
+  width: 100%;
+  border: 1px solid darken($color: $col-secondary, $amount: 10%);
+}

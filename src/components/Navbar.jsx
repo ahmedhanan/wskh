@@ -28,7 +28,7 @@ function Navbar() {
         </Link>
         <Link
           className='link'
-          to=''
+          to='contact'
           spy={true}
           smooth={true}
           offset={50}

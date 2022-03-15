@@ -9,7 +9,7 @@ function Hero() {
         <main className='hero__main'>
           <p className='hero__text'>Your modern day web development partner.</p>
           <div className='hero__btn'>
-            <Link className='link btn' to='' spy={true} smooth={true} offset={50} duration={500}>
+            <Link className='link btn' to='contact' spy={true} smooth={true} offset={50} duration={500}>
               Hire us
             </Link>
           </div>
