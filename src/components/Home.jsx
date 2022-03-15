@@ -21,7 +21,6 @@ function Home() {
 
   const contactFormHandler = (e) => {
     e.preventDefault();
-    console.log(e.target);
   };
   return (
     <>
@@ -71,17 +70,32 @@ function Home() {
             <label className='form__label'>
               Your name
               <br />
-              <input type='text' className='form__input' />
+              <input
+                type='text'
+                className='form__input'
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
             </label>
             <label className='form__label'>
               Email
               <br />
-              <input type='email' className='form__input' />
+              <input
+                type='email'
+                className='form__input'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </label>
             <label className='form__label'>
               How can we be at your assistance?
               <br />
-              <textarea rows='10' className='form__textarea'></textarea>
+              <textarea
+                rows='10'
+                className='form__textarea'
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              ></textarea>
             </label>
             <button className='btn'>Submit</button>
           </form>
