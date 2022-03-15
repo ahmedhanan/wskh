@@ -7,11 +7,10 @@ function Home() {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [message, setMessage] = useState();
-
   useEffect(() => {
     const getProjects = async () => {
       const fetchProjects = await fetch(
-        'https://hanana20.sg-host.com/wp-json/wp/v2/projects/'
+        'https://api.webservicesbykh.com/wp-json/wp/v2/projects/'
       );
       const response = await fetchProjects.json();
       setProjects(response);
